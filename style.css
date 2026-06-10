@@ -104,6 +104,7 @@ header {
   border-radius: var(--border-radius-md);
   box-shadow: var(--box-shadow-sm);
   transition: all var(--transition-normal);
+  position: relative;
 }
 
 .brand-section {
@@ -1075,6 +1076,180 @@ footer.app-footer {
   color: var(--text-muted);
   border-top: 1px solid var(--border-color);
   margin-top: auto;
+}
+
+/* ==========================================================================
+   Mobile Responsive Styles (Grid layouts, compact forms, scrollable tabs)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 16px;
+    padding-top: 48px; /* Leave space for absolute theme toggle */
+  }
+
+  .brand-section {
+    width: 100%;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Horizontally scrollable navigation tabs on mobile screens */
+  .nav-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    display: flex;
+    padding: 4px;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  /* Compact controls bar */
+  .controls-bar {
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .filters-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-input-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .date-filter-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .date-filter-group input {
+    width: 100%;
+  }
+
+  .action-buttons-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .action-buttons-group #btn_open_add_modal {
+    grid-column: span 2;
+  }
+
+  /* Compact Table formatting */
+  .data-table th, .data-table td {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+
+  /* Form spacing in modal */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  /* Cost Tracking Split and list sizing */
+  .cost-details-panel {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .contract-selector-list {
+    max-height: 260px;
+  }
+
+  .cost-input-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Modal responsive wrapper */
+  .modal-content {
+    border-radius: var(--border-radius-md);
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-body {
+    padding: 16px 20px;
+  }
+
+  .modal-footer {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-buttons-group {
+    grid-template-columns: 1fr;
+  }
+  .action-buttons-group #btn_open_add_modal {
+    grid-column: span 1;
+  }
+  
+  .metric-card {
+    padding: 16px;
+  }
+  
+  .metric-value {
+    font-size: 1.4rem;
+  }
+
+  .chart-card {
+    padding: 16px;
+    min-height: 280px;
+  }
+
+  .chart-container {
+    height: 220px;
+  }
 }
 
 /* ==========================================================================
