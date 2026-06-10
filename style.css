@@ -985,6 +985,13 @@ header {
 }
 
 /* Form Styles inside Modals */
+#contract_form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
