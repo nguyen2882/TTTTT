@@ -1,0 +1,117 @@
+[
+  {
+    "id": "ct_001",
+    "code": "HD-2026-001",
+    "customerName": "Công ty Cổ phần Đầu tư và Phát triển Minh Long",
+    "customerAddress": "Lô C2 Khu Công nghiệp Quất Động, Thường Tín, Hà Nội",
+    "customerTaxCode": "0108923456",
+    "representative": "Trần Minh Long",
+    "position": "Tổng Giám đốc",
+    "signedDate": "2026-01-15",
+    "deliveryDate": "2026-04-15",
+    "dueDate": "2026-05-15",
+    "value": 850000000,
+    "paidAmount": 600000000,
+    "status": "debt",
+    "notes": "Triển khai phần mềm quản lý kho ERP và bảo trì 1 năm.",
+    "costs": {
+      "materials": 120000000,
+      "labor": 280000000,
+      "subcontract": 50000000,
+      "shipping": 10000000,
+      "miscellaneous": 20000000
+    }
+  },
+  {
+    "id": "ct_002",
+    "code": "HD-2026-002",
+    "customerName": "Công ty TNHH Thương mại & Dịch vụ Hoàng Phát",
+    "customerAddress": "Số 45 Lê Văn Lương, Quận Thanh Xuân, Hà Nội",
+    "customerTaxCode": "0109543210",
+    "representative": "Lê Hoàng Phát",
+    "position": "Giám đốc",
+    "signedDate": "2026-02-10",
+    "deliveryDate": "2026-05-10",
+    "dueDate": "2026-06-10",
+    "value": 420000000,
+    "paidAmount": 420000000,
+    "status": "completed",
+    "notes": "Cung cấp và lắp đặt thiết bị phòng họp thông minh.",
+    "costs": {
+      "materials": 250000000,
+      "labor": 40000000,
+      "subcontract": 0,
+      "shipping": 15000000,
+      "miscellaneous": 5000000
+    }
+  },
+  {
+    "id": "ct_003",
+    "code": "HD-2026-003",
+    "customerName": "Công ty Cổ phần Thiết bị Giáo dục Thành An",
+    "customerAddress": "Khu đô thị mới Dương Nội, Hà Đông, Hà Nội",
+    "customerTaxCode": "0107345678",
+    "representative": "Nguyễn Thành An",
+    "position": "Giám đốc",
+    "signedDate": "2026-03-01",
+    "deliveryDate": "2026-06-30",
+    "dueDate": "2026-07-30",
+    "value": 1250000000,
+    "paidAmount": 500000000,
+    "status": "ongoing",
+    "notes": "Thi công hệ thống điện nhẹ và mạng Lan cho tòa nhà trường học.",
+    "costs": {
+      "materials": 600000000,
+      "labor": 300000000,
+      "subcontract": 100000000,
+      "shipping": 20000000,
+      "miscellaneous": 30000000
+    }
+  },
+  {
+    "id": "ct_004",
+    "code": "HD-2026-004",
+    "customerName": "Doanh nghiệp Tư nhân Xây dựng An Bình",
+    "customerAddress": "Số 88 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội",
+    "customerTaxCode": "0106456789",
+    "representative": "Phạm An Bình",
+    "position": "Chủ doanh nghiệp",
+    "signedDate": "2026-01-05",
+    "deliveryDate": "2026-03-05",
+    "dueDate": "2026-04-05",
+    "value": 300000000,
+    "paidAmount": 100000000,
+    "status": "overdue",
+    "notes": "Tư vấn thiết kế kiến trúc và cảnh quan khu biệt thự liền kề.",
+    "costs": {
+      "materials": 10000000,
+      "labor": 120000000,
+      "subcontract": 40000000,
+      "shipping": 5000000,
+      "miscellaneous": 15000000
+    }
+  },
+  {
+    "id": "ct_005",
+    "code": "HD-2026-005",
+    "customerName": "Công ty TNHH MTV Xuất Nhập Khẩu Đại Dương",
+    "customerAddress": "Cảng Đình Vũ, Hải An, Hải Phòng",
+    "customerTaxCode": "0201876543",
+    "representative": "Vũ Đại Dương",
+    "position": "Giám đốc điều hành",
+    "signedDate": "2026-04-20",
+    "deliveryDate": "2026-08-20",
+    "dueDate": "2026-09-20",
+    "value": 950000000,
+    "paidAmount": 300000000,
+    "status": "ongoing",
+    "notes": "Bảo trì nâng cấp hệ thống máy chủ và dịch vụ đám mây.",
+    "costs": {
+      "materials": 400000000,
+      "labor": 150000000,
+      "subcontract": 80000000,
+      "shipping": 5000000,
+      "miscellaneous": 10000000
+    }
+  }
+]
