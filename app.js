@@ -101,6 +101,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("form_status");
   const formNotes = document.getElementById("form_notes");
 
+  const formCostMaterials = document.getElementById("form_cost_materials");
+  const formCostLabor = document.getElementById("form_cost_labor");
+  const formCostSubcontract = document.getElementById("form_cost_subcontract");
+  const formCostShipping = document.getElementById("form_cost_shipping");
+  const formCostMiscellaneous = document.getElementById("form_cost_miscellaneous");
+
+  const costBtnAddContract = document.getElementById("cost_btn_add_contract");
+  const docBtnAddContract = document.getElementById("doc_btn_add_contract");
+
   const importModal = document.getElementById("import_modal");
   const btnCloseImportModal = document.getElementById("btn_close_import_modal");
   const btnCancelImportModal = document.getElementById("btn_cancel_import_modal");
@@ -571,6 +580,13 @@ document.addEventListener("DOMContentLoaded", () => {
         formValue.value = c.value;
         formPaidAmount.value = c.paidAmount;
         
+        // Populate cost fields
+        formCostMaterials.value = c.costs?.materials || 0;
+        formCostLabor.value = c.costs?.labor || 0;
+        formCostSubcontract.value = c.costs?.subcontract || 0;
+        formCostShipping.value = c.costs?.shipping || 0;
+        formCostMiscellaneous.value = c.costs?.miscellaneous || 0;
+
         // If status is custom set or auto, match appropriately
         formStatus.value = c.status;
       }
@@ -578,6 +594,12 @@ document.addEventListener("DOMContentLoaded", () => {
       modalContractTitle.textContent = "Thêm Hợp đồng mới";
       contractIdHidden.value = "";
       formStatus.value = "auto";
+
+      formCostMaterials.value = 0;
+      formCostLabor.value = 0;
+      formCostSubcontract.value = 0;
+      formCostShipping.value = 0;
+      formCostMiscellaneous.value = 0;
     }
     
     contractModal.classList.add("active");
@@ -588,6 +610,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   btnOpenAddModal.addEventListener("click", () => openContractModal(null));
+  costBtnAddContract.addEventListener("click", () => openContractModal(null));
+  docBtnAddContract.addEventListener("click", () => openContractModal(null));
   btnCloseContractModal.addEventListener("click", closeContractModal);
   btnCancelContractModal.addEventListener("click", closeContractModal);
 
@@ -616,7 +640,14 @@ document.addEventListener("DOMContentLoaded", () => {
       dueDate: formDueDate.value,
       value: valueNum,
       paidAmount: paidNum,
-      notes: formNotes.value.trim()
+      notes: formNotes.value.trim(),
+      costs: {
+        materials: Number(formCostMaterials.value) || 0,
+        labor: Number(formCostLabor.value) || 0,
+        subcontract: Number(formCostSubcontract.value) || 0,
+        shipping: Number(formCostShipping.value) || 0,
+        miscellaneous: Number(formCostMiscellaneous.value) || 0
+      }
     };
 
     // If explicit status selected instead of auto
